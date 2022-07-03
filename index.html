@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 <head>
@@ -9,17 +10,52 @@
 
     body{background-color: #00ffff;}
     div{background-color: #FFE08C;
-         width:96%;
+         width: 96%;
          padding: 30px;
-         border: 5px solid red}
-         p{line-height: 1.5em;}
+         padding-bottom: 0px;
+         border: 5px solid red;
+}
+
    </style>
 
-<h1 style="text-align:center;"><a href="index.html">문보성 자기소개 페이지</a></h1>
+<h1 style="text-align:center;">
+  <a href="index.html">  문보성 자기소개 페이지</a>
+</h1>
+
 <h2 style="text-align:right;">
-  <a href="a.html">취미</a> ㅣ
-  <a href="b.html">Like</a>
+  <a href="H.html">취미</a> |
+  <a href="L.html">Like</a><br>
+
+  <style="text-align: right;">
+    <span id="clock" style="color:blue; font-size: 30px;">clock</span>
+    <span id="apm" style="color:blue; font-size: 30px;"  >ampm</span>
+
+
+<script>
+    var Target = document.getElementById("clock");
+    var Target_apm = document.getElementById("apm");
+    function clock() {
+        var time = new Date();
+        var hours = time.getHours();
+        var minutes = time.getMinutes();
+        var seconds = time.getSeconds();
+        var AmPm ="AM";
+        if(hours > 12){
+            var AmPm ="PM";
+            hours %= 12;
+        }
+
+        Target.innerText =
+        `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+
+        Target_apm.innerText = `${AmPm}`;
+
+    }
+    clock();
+    setInterval(clock, 1000); // 1초마다 실행
+</script>
 </h2>
+
 </div>
 </head>
 
@@ -34,7 +70,7 @@
 <li>  E-mail : moon127@berkeley.edu</li>
 <li>Front End Engineer</li>
 </h2>
-<img src="main.jpg" width="370" height="430">
+<img src="main.jpeg" width="370" height="430">
 
 </div>
 
