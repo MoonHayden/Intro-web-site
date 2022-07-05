@@ -1,32 +1,66 @@
-
 <!doctype html>
 <html>
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="123.css">
+
   <div>
   <title>web1 - Welcome</title>
   <meta charset="utf-8">
 
-  <style>
 
-    body{background-color: #00ffff;}
-    div{background-color: #FFE08C;
-         width:96%;
-         padding: 30px;
-         border: 5px solid green}
-         p{line-height: 1.5em;}
-   </style>
 
-<h1 style="text-align:center;"><a href="index.html">문보성 자기소개 페이지</a></h1>
+<h1 class="txt">
+  <a href="index.html">
+
+  <span>문보성</span>
+  <span>자기소개</span>
+  <span>페이지</span>
+
+  </a>
+</h1>
+
 <h2 style="text-align:right;">
-  <a href="H.html">취미</a> |
-  <a href="L.html">Like</a>
+  <a href="H.html" style="color:Royalblue; font-size: 32px;">취미</a> |
+  <a href="L.html" style="color:Royalblue; font-size: 32px;">Like</a><br>
+
+    <span id="clock" style="color:black; font-size: 30px;">clock</span>
+    <span id="apm" style="color:black; font-size: 30px;"  >ampm</span>
+
+    <script>
+        var Target = document.getElementById("clock");
+        var Target_apm = document.getElementById("apm");
+        function clock() {
+            var time = new Date();
+            var hours = time.getHours();
+            var minutes = time.getMinutes();
+            var seconds = time.getSeconds();
+            var AmPm ="AM";
+            if(hours > 12){
+                var AmPm ="PM";
+                hours %= 12;
+            }
+
+            Target.innerText =
+            `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+
+            Target_apm.innerText = `${AmPm}`;
+
+        }
+        clock();
+        setInterval(clock, 1000); // 1초마다 실행
+    </script>
 </h2>
+
 </div>
 </head>
 
-<body>
+<body style = "background-color: LightYellow;">
+
   <div style="text-align:center;">
-  <H1>WineㅣTravel</H1>
+  <h2>WineㅣTravel</h2>
 
 <img src="wine.jpeg" width="400" height="550">
 <img src="travel.jpeg" width="600" height="550">

@@ -1,0 +1,50 @@
+<style>
+
+  body{}
+  h1{font-size:45px;
+  text-align: center;}
+
+  a{text-decoration: none;}
+
+  h2{font-size:30px;
+    color: Orange;
+  }
+
+  div{
+    width: 96%;
+    padding: 30px;
+    padding-bottom: 0px;
+    border: 5px solid LawnGreen;
+    font-family: 'Nanum Pen Script', cursive;
+     }
+
+     .txt span {position:relative;
+       display: inline-block; color:Blue;
+       letter-spacing:-0.8px;
+     animation:txtup 1.5s infinite;
+     -webkit-animation:txtup 1.5s infinite;
+     -ms-animation:txtup 1.5s infinite;
+     -moz-animation: txtup 1.5s infinite;
+     }
+     .txt span:nth-of-type(1){animation-delay:0.1s;}
+     .txt span:nth-of-type(2){animation-delay:0.2s;}
+     .txt span:nth-of-type(3){animation-delay:0.3s;}
+
+     @-webkit-keyframes txtup {
+         0%{top:0;}
+         20% {top:-0.2rem;}
+         40% {top:0;}
+         60% {top:0;}
+         80% {top:0;}
+         100% {top:0}
+     }
+     @keyframes txtup {
+         0% {top:0;}
+         20% {top:-0.2rem;}
+         40% {top:0}
+         60% {top:0}
+         80% {top:0}
+         100% {top:0}
+     }
+
+ </style>
